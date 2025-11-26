@@ -9,21 +9,21 @@
 /// - Filter connections by keywords 
 /// - Export filtered results 
 /// - Statistical analysis 
+/// - Browser automation (experimental) 
 /// 
 /// # Example 
 /// 
-/// ```rust 
-/// use netprune::csv_parser::parse_csv; 
-/// use netprune::filter::filter_connections; 
-/// use netprune::config::load_config; 
+/// ```no_run 
+/// use netprune::parser::csv_parser::parse_csv; 
+/// use netprune::filters; 
+/// use netprune::models::config::Config; 
 /// 
-/// let config = load_config().unwrap(); 
+/// let config = Config::load("config.toml").unwrap(); 
 /// let connections = parse_csv("connections.csv").unwrap(); 
-/// let results = filter_connections(&connections, &config.filters); 
 /// ``` 
  
-pub mod csv_parser; 
-pub mod filter; 
-pub mod config; 
+pub mod parser; 
+pub mod filters; 
 pub mod models; 
+pub mod analyzer; 
 pub mod automation; 
