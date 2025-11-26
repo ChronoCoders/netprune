@@ -11,8 +11,9 @@ impl CsvParser {
         let file = File::open(path)?;
         let mut buf_reader = BufReader::new(file);
         
+        let mut line = String::new();
         for _ in 0..3 {
-            let mut line = String::new();
+            line.clear();
             buf_reader.read_line(&mut line)?;
         }
         
