@@ -7,7 +7,7 @@ Cargo.lock
 .vscode/ 
 .idea/ 
 *.swp 
-*.swo
+*.swo 
 *~ 
  
 # OS 
@@ -17,10 +17,10 @@ Thumbs.db
 # Sensitive data 
 config.toml 
 *.csv 
-/data/ 
+/data/*.csv 
 /output/ 
+description.txt 
+topics.txt 
  
 # Logs 
 *.log 
-description.txt 
-topics.txt 
